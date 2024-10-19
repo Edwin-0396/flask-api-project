@@ -1,6 +1,7 @@
 import os
 
 class Config:
-    SECRET_KEY = os.getenv('SECRET_KEY', 'mysecretkey')  # Use a secure secret key
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///app.db'  # SQLite for local development, switch to PostgreSQL in production
+    SECRET_KEY = os.getenv("SECRET_KEY", "default_secret_key")
+    JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY", "default_jwt_secret_key")
+    SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL", "sqlite:///app.db")
     SQLALCHEMY_TRACK_MODIFICATIONS = False
