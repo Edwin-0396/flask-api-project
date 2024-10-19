@@ -4,8 +4,6 @@ venv/
 # Ignore SQLite database
 *.db
 
-# Ignore migration files (optional, depending on your needs)
-migrations/
 
 # Ignore compiled Python files
 __pycache__/
