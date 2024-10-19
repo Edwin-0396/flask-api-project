@@ -8,6 +8,7 @@ def setup_routes(app):
     @app.route('/register', methods=['POST'])
     def register():
         data = request.get_json()
+        print(data)  # Debugging log to print the incoming JSON data
         username = data.get('username')
         password = data.get('password')
 
@@ -23,6 +24,7 @@ def setup_routes(app):
         db.session.commit()
 
         return jsonify({"message": "User created successfully"}), 201
+
 
     # User login route
     @app.route('/login', methods=['POST'])
